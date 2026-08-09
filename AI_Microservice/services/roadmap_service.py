@@ -27,7 +27,7 @@ async def fetch_skills_by_ids(skill_ids: List[str]) -> List[Dict]:
             "id": str(s["_id"]),
             "name": s.get("name", "").strip(),
             "category": s.get("category", "uncategorized"),
-            "points": int(s.get("points", 0) or 0)
+            "points": int(s.get("pointValue", 0) or 0)
         })
     return skills
 
@@ -41,7 +41,7 @@ async def build_skill_name_map() -> Dict[str, Dict]:
                 "id": str(s["_id"]),
                 "name": name,
                 "category": s.get("category", "uncategorized"),
-                "points": int(s.get("points", 0) or 0)
+                "points": int(s.get("pointValue", 0) or 0)
             }
     return mapping
 
