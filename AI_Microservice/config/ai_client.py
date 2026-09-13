@@ -7,7 +7,7 @@ class AIClient:
     def __init__(self, gemini_client):
         self.gemini = gemini_client
 
-    def generate(self, prompt: str, model: str = "gemini-flash-latest", timeout: int = 30) -> Dict:
+    def generate(self, prompt: str, model: str = "gemini-3.7-flash", timeout: int = 30) -> Dict:
         """
         Synchronous wrapper around google.genai client.models.generate_content.
         Returns a dict with key 'text' or raises an exception.
