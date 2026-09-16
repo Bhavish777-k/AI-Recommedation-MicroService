@@ -9,7 +9,7 @@ router = APIRouter()
 class RoadmapRequest(BaseModel):
     user_id: str
     target_role: str
-    model: str = "gemini-flash-latest"
+    model: str = "gemini-3.1-flash-lite"
 
 @router.post("/roadmap", dependencies=[Depends(validate_api_key)])
 async def roadmap(req: RoadmapRequest):
