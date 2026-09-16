@@ -100,7 +100,7 @@ Return the roadmap in numbered sections and include short rationale for prioriti
 """
     return prompt
 
-async def generate_roadmap_for_user(user_id: str, target_role: str, model: str = "gemini-3.1-flash-lite"):
+async def generate_roadmap_for_user(user_id: str, target_role: str, model: str = "gemini-3.1-flash-live"):
     user = await fetch_user(user_id)
     if not user:
         return {"error": "User not found"}
